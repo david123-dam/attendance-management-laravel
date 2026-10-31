@@ -1,1 +1,9 @@
-@extends('layouts.app') @section('title','Edit Student') @section('page_title','Edit Student') @section('content')<div class="page-head"><div><h1>Edit Student</h1><p>Update student information.</p></div></div><div class="card panel"><form method="POST" action="{{ route('students.update',$student) }}">@csrf @method('PUT') @include('students._form',['buttonText'=>'Save Changes'])</form></div>@endsection
+@extends('layouts.app') @section('title','Edit Student') @section('page_title','Edit Student') @section('content')<div class="page-head">
+    <div>
+        <h1>Edit Student</h1>
+        <p>Update student information.</p>
+    </div>
+</div>
+<div class="card panel">
+    <form method="POST" action="{{ route('students.update',$student) }}">@csrf @method('PUT') @include('students._form',['buttonText'=>'Save Changes'])</form>
+</div>@endsection
